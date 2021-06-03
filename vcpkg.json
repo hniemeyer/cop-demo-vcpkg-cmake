@@ -1,5 +1,5 @@
 {
-  "name": "PresetsTest",
+  "name": "presetstest",
   "version-string": "0.0.1",
   "dependencies": [
     "gtest",
