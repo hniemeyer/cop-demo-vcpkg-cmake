@@ -8,6 +8,7 @@ include(CTest)
 
 # Include sub-projects.
 add_subdirectory("SampleApp")
+add_subdirectory("mathlib")
 
 enable_testing()
 add_subdirectory(tests)

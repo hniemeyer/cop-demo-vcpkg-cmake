@@ -7,6 +7,6 @@ set (TEST_SOURCE_FILES
 	)
 
 add_executable(sample-tests ${TEST_SOURCE_FILES})
-target_link_libraries(sample-tests PRIVATE GTest::gtest)
+target_link_libraries(sample-tests PRIVATE math GTest::gtest)
 
 gtest_discover_tests(sample-tests)
