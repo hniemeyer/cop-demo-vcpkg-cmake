@@ -65,6 +65,12 @@
       "inherits": "core-build",
       "nativeToolOptions": [ "-v" ]
     },
+    {
+      "name": "normal-build",
+      "description": "just a normal build",
+      "configurePreset": "x86-windows",
+      "inherits": "core-build",
+    }
   ],
   "testPresets": [
     {

@@ -6,6 +6,9 @@ cmake_minimum_required (VERSION 3.20)
 project ("VcpkgDemoCmake" LANGUAGES CXX)
 include(CTest)
 
+#Standard project setting
+include(cmake/StandardProjectSettings.cmake)
+
 #Compiler Warnings
 # Link this 'library' to use the warnings specified in CompilerWarnings.cmake
 add_library(project_warnings INTERFACE)
