@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.20)
 
-project ("PresetsTest" LANGUAGES CXX)
+project ("VcpkgDemoCmake" LANGUAGES CXX)
 include(CTest)
 
 # Include sub-projects.
