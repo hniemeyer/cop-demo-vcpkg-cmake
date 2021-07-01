@@ -42,7 +42,7 @@
       }
     },
     {
-      "name": "x86-windows-release",
+      "name": "x86-windows-release-with-clang",
       "description": "Sets x86 arch, compilers, build type",
       "inherits": [ "base" ],
       "architecture": {
@@ -51,7 +51,7 @@
       },
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CXX_COMPILER": "cl"
+        "CMAKE_CXX_COMPILER": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/Llvm/bin/clang++.exe"
       },
       "vendor": {
         "microsoft.com/VisualStudioSettings/CMake/1.0": {
