@@ -24,7 +24,7 @@
       }
     },
     {
-      "name": "x86-windows",
+      "name": "x86-windows-debug",
       "description": "Sets x86 arch, compilers, build type",
       "inherits": [ "base" ],
       "architecture": {
@@ -41,6 +41,24 @@
         }
       }
     },
+    {
+      "name": "x86-windows-release",
+      "description": "Sets x86 arch, compilers, build type",
+      "inherits": [ "base" ],
+      "architecture": {
+        "value": "x86",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_COMPILER": "cl"
+      },
+      "vendor": {
+        "microsoft.com/VisualStudioSettings/CMake/1.0": {
+          "hostOS": [ "Windows" ]
+        }
+      }
+    }
   ],
   "buildPresets": [
     {
@@ -54,22 +72,22 @@
     {
       "name": "clean-build",
       "description": "Clean before build (--clean-first)",
-      "configurePreset": "x86-windows",
+      "configurePreset": "x86-windows-debug",
       "inherits": "core-build",
       "cleanFirst": true
     },
     {
       "name": "verbose-build",
       "description": "Passes -v to Ninja",
-      "configurePreset": "x86-windows",
+      "configurePreset": "x86-windows-debug",
       "inherits": "core-build",
       "nativeToolOptions": [ "-v" ]
     },
     {
       "name": "normal-build",
       "description": "just a normal build",
-      "configurePreset": "x86-windows",
-      "inherits": "core-build",
+      "configurePreset": "x86-windows-debug",
+      "inherits": "core-build"
     }
   ],
   "testPresets": [
@@ -84,7 +102,7 @@
     },
     {
       "name": "windows-core-test",
-      "configurePreset": "x86-windows",
+      "configurePreset": "x86-windows-debug",
       "inherits": "core-test"
     },
   ]
