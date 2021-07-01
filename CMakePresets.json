@@ -74,6 +74,7 @@
       "description": "Clean before build (--clean-first)",
       "configurePreset": "x86-windows-debug",
       "inherits": "core-build",
+      "jobs":  8,
       "cleanFirst": true
     },
     {
