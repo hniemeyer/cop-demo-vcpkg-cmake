@@ -16,7 +16,7 @@ include(cmake/CompilerWarnings.cmake)
 set_project_warnings(project_warnings)
 
 # Include sub-projects.
-add_subdirectory("SampleApp")
+add_subdirectory("sample_app")
 add_subdirectory("mathlib")
 
 enable_testing()
