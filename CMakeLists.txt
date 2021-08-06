@@ -20,4 +20,4 @@ add_subdirectory("sample_app")
 add_subdirectory("mathlib")
 
 enable_testing()
-add_subdirectory(tests)
+add_subdirectory("mathlib_test")
