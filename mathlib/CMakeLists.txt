@@ -1,4 +1,6 @@
-add_library(math STATIC math.cpp include/math.hpp)
+file(GLOB_RECURSE SRC_FILES src/*.cpp)
+file(GLOB_RECURSE  HEADER_FILES include/*.h)
+add_library(math STATIC ${SRC_FILES} ${HEADER_FILES})
 target_include_directories(math PUBLIC include)
 target_link_libraries(math PRIVATE project_warnings)
 target_compile_features(math PRIVATE cxx_std_20)
