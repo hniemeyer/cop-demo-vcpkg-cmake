@@ -1,5 +1,5 @@
 ﻿#include <fmt/core.h>
-#include "math.hpp"
+#include "mathlib/math.hpp"
 
 int main() {
 	fmt::print("Hello, world!\n");

@@ -1,4 +1,4 @@
-#include "math.hpp"
+#include "mathlib/math.hpp"
 
 int add(int x, int y)
 {
