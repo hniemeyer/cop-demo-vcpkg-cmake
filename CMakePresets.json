@@ -24,11 +24,11 @@
       }
     },
     {
-      "name": "x86-windows-debug",
-      "description": "Sets x86 arch, compilers, build type",
+      "name": "x64-windows-debug",
+      "description": "Sets x64 arch, compilers, build type",
       "inherits": [ "base" ],
       "architecture": {
-        "value": "x86",
+        "value": "x64",
         "strategy": "external"
       },
       "cacheVariables": {
@@ -42,16 +42,16 @@
       }
     },
     {
-      "name": "x86-windows-release-with-clang",
-      "description": "Sets x86 arch, compilers, build type",
+      "name": "x64-windows-release",
+      "description": "Sets x64 arch, compilers, build type",
       "inherits": [ "base" ],
       "architecture": {
-        "value": "x86",
+        "value": "x64",
         "strategy": "external"
       },
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CXX_COMPILER": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/Llvm/bin/clang++.exe"
+        "CMAKE_CXX_COMPILER": "cl"
       },
       "vendor": {
         "microsoft.com/VisualStudioSettings/CMake/1.0": {
@@ -72,7 +72,7 @@
     {
       "name": "clean-build",
       "description": "Clean before build (--clean-first)",
-      "configurePreset": "x86-windows-debug",
+      "configurePreset": "x64-windows-debug",
       "inherits": "core-build",
       "jobs":  8,
       "cleanFirst": true
@@ -80,14 +80,20 @@
     {
       "name": "verbose-build",
       "description": "Passes -v to Ninja",
-      "configurePreset": "x86-windows-debug",
+      "configurePreset": "x64-windows-debug",
       "inherits": "core-build",
       "nativeToolOptions": [ "-v" ]
     },
     {
       "name": "normal-build",
       "description": "just a normal build",
-      "configurePreset": "x86-windows-debug",
+      "configurePreset": "x64-windows-debug",
+      "inherits": "core-build"
+    },
+    {
+      "name": "release-build",
+      "description": "just a normal build",
+      "configurePreset": "x64-windows-release",
       "inherits": "core-build"
     }
   ],
@@ -103,7 +109,7 @@
     },
     {
       "name": "windows-core-test",
-      "configurePreset": "x86-windows-debug",
+      "configurePreset": "x64-windows-debug",
       "inherits": "core-test"
     },
   ]
