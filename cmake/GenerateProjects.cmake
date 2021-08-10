@@ -48,3 +48,28 @@ function(generate_library)
     target_link_libraries(${ARG_PROJ_NAME} PRIVATE project_warnings ${ARG_EXT_DEPENDENCIES} ${ARG_INT_DEPENDENCIES})
     target_compile_features(${ARG_PROJ_NAME} PRIVATE cxx_std_20)
 endfunction()
+
+
+function(generate_test_executable)
+    set(prefix ARG)
+    set(noValues)
+    set(singleValues PROJ_NAME)
+    set(multiValues INT_DEPENDENCIES)
+
+    cmake_parse_arguments(${prefix}
+                         "${noValues}"
+                         "${singleValues}"
+                         "${multiValues}"
+                          ${ARGN})
+
+    message("--------------------")
+    message("generating test case project: ${ARG_PROJ_NAME} ")
+    message("int deps: ${ARG_INT_DEPENDENCIES}")
+    message("--------------------")
+
+    file(GLOB_RECURSE SRC_FILES src/*.cpp)
+    add_executable (${ARG_PROJ_NAME} ${SRC_FILES})
+    target_link_libraries(${ARG_PROJ_NAME} PRIVATE ${ARG_INT_DEPENDENCIES} GTest::gtest)
+    target_compile_features(${ARG_PROJ_NAME} PRIVATE cxx_std_20)
+    gtest_discover_tests(${ARG_PROJ_NAME})
+endfunction()
