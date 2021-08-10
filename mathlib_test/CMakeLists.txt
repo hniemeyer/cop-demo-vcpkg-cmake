@@ -1,6 +1,3 @@
-find_package(GTest CONFIG REQUIRED)
-include(GoogleTest)
-
 file(GLOB_RECURSE TEST_SOURCE_FILES src/*.cpp)
 
 add_executable(mathlib-tests ${TEST_SOURCE_FILES})

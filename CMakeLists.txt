@@ -8,6 +8,8 @@ include(CTest)
 
 #find external libs
 find_package(fmt CONFIG REQUIRED)
+find_package(GTest CONFIG REQUIRED)
+include(GoogleTest)
 
 #Standard project setting
 include(cmake/StandardProjectSettings.cmake)
