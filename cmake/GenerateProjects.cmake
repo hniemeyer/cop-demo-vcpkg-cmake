@@ -24,7 +24,7 @@ function(generate_executable)
 endfunction()
 
 function(generate_library)
-set(prefix ARG)
+    set(prefix ARG)
     set(noValues)
     set(singleValues PROJ_NAME)
     set(multiValues EXT_DEPENDENCIES INT_DEPENDENCIES)
