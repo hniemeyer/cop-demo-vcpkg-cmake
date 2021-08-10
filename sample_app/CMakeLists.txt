@@ -1,1 +1,1 @@
-﻿GENERATE_APPLICATION(PROJ_NAME sample_app INT_DEPENDENCIES math EXT_DEPENDENCIES fmt::fmt)
+﻿generate_executable(PROJ_NAME sample_app INT_DEPENDENCIES math EXT_DEPENDENCIES fmt::fmt)
