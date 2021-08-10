@@ -15,6 +15,9 @@ add_library(project_warnings INTERFACE)
 include(cmake/CompilerWarnings.cmake)
 set_project_warnings(project_warnings)
 
+#functionality to generate executables, libs and test cases accordingly
+include(cmake/GenerateProjects.cmake)
+
 # Include sub-projects.
 add_subdirectory("sample_app")
 add_subdirectory("mathlib")

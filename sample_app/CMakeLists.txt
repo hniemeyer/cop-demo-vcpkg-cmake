@@ -1,5 +1,1 @@
-﻿find_package(fmt CONFIG REQUIRED)
-file(GLOB_RECURSE SRC_FILES src/*.cpp)
-add_executable (sample_app ${SRC_FILES})
-target_link_libraries(sample_app PRIVATE project_warnings fmt::fmt math)
-target_compile_features(sample_app PRIVATE cxx_std_20)
+﻿GENERATE_APPLICATION(PROJ_NAME sample_app INT_DEPENDENCIES math EXT_DEPENDENCIES fmt::fmt)
