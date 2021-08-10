@@ -6,6 +6,9 @@ cmake_minimum_required (VERSION 3.20)
 project ("VcpkgDemoCmake" LANGUAGES CXX)
 include(CTest)
 
+#find external libs
+find_package(fmt CONFIG REQUIRED)
+
 #Standard project setting
 include(cmake/StandardProjectSettings.cmake)
 
