@@ -5,6 +5,7 @@ cmake_minimum_required (VERSION 3.20)
 
 project ("VcpkgDemoCmake" LANGUAGES CXX)
 include(CTest)
+enable_testing()
 
 #find external libs
 find_package(fmt CONFIG REQUIRED)
@@ -27,5 +28,4 @@ include(cmake/GenerateProjects.cmake)
 add_subdirectory("sample_app")
 add_subdirectory("mathlib")
 
-enable_testing()
 add_subdirectory("mathlib_test")
