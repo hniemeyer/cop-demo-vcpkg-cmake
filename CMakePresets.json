@@ -58,6 +58,25 @@
           "hostOS": [ "Windows" ]
         }
       }
+    },
+    {
+      "name": "linux-base",
+      "description": "Sets compilers, build type",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "ENABLE_IPO": "OFF",
+        "CMAKE_TOOLCHAIN_FILE": {
+          "type": "FILEPATH",
+          "value": "/home/hniemeyer/vcpkg/scripts/buildsystems/vcpkg.cmake"
+        }
+      },
+      "vendor": {
+        "microsoft.com/VisualStudioSettings/CMake/1.0": {
+          "hostOS": [ "Linux" ]
+        }
+      }
     }
   ],
   "buildPresets": [
