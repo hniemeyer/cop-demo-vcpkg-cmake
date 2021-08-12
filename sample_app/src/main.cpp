@@ -4,5 +4,6 @@
 int main() {
 	fmt::print("Hello, world!\n");
 	fmt::print("Coming from fmt!\n");
-	fmt::print("{}", mathlib::add(5, 6));
+	fmt::print("5+6 = {}", mathlib::add(5, 6));
+	fmt::print("5*6 = {}", mathlib::mul(5, 6));
 }
