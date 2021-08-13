@@ -1,6 +1,6 @@
 #include "mathlib/math.hpp"
 
-namespace mathlib
+namespace math
 {
 	int add(int x, int y)
 	{

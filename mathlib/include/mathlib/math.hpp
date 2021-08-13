@@ -1,5 +1,5 @@
 #pragma once
-namespace mathlib
+namespace math
 {
 	int add(int x, int y);
 
