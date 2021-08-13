@@ -11,7 +11,4 @@ namespace math
 	{
 		return x * y;
 	}
-
-
 }
-
